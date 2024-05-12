@@ -7,7 +7,7 @@ O padrão singleton consiste de uma classe que será instanciada apenas uma vez 
 Permite a integração entre objetos que não possuem interfaces compatíveis, serve como um "adaptador" ao realizar a comunicação entre estes objetos.
 ![UML Adapter](./src/images/adapter-uml.png)
 
-No código de [`código de exemplo`](./src/adapter/client.ts) 
+No código de código de exemplo, no arquivo [`client.ts`](./src/adapter/client.ts) está sendo implementada a função [`validarEmail()`](./src/adapter/client.ts#L4) que recebe como parâmetros um protocolo de validação, que é estabelecido pela interface [`EmailValidatorProtocol`](./src/adapter/validation/email-validator-protocol.ts), a classe [`EmailValidatorAdapter`](./src/adapter/validation/email-validator-adapter.ts) implementa a interface. Dessa forma, é possível alterar a validação de email futuramente sem precisar alterar todas as linhas de código em que a solução é utilizada, ao invés disso, modificamos apenas a classe adapter.
 
 ### - State (Comportamental)
 
